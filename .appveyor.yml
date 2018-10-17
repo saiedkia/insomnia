@@ -1,4 +1,4 @@
-image: Visual Studio 2015
+image: Visual Studio 2017
 build: off
 test: off
 
@@ -10,8 +10,8 @@ shallow_clone: true
 platform: x64
 environment:
   NODEJS_VERSION: "8"
-  CSC_LINK: '%WINDOWS_CSC_LINK%'
-  CSC_KEY_PASSWORD: '%WINDOWS_CSC_KEY_PASSWORD%'
+  #CSC_LINK: '%WINDOWS_CSC_LINK%'
+  #CSC_KEY_PASSWORD: '%WINDOWS_CSC_KEY_PASSWORD%'
 
 # Things to install after repo clone
 install:
@@ -19,7 +19,7 @@ install:
   - ps: Install-Product node $env:NODEJS_VERSION $env:Platform
   - node --version
   - npm --version
-  - npm config set msvs_version 2015
+  - npm config set msvs_version 2017
   - npm run bootstrap
   - npm test
 
